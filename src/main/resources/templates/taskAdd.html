@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Задачи</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="blocks/header :: header"></div>
+<main>
+    <div class="container mt-5 mb-5">
+        <h1>Добавление задачи</h1>
+        <form action="/task/add" method="post">
+            <input type="text" name="status" placeholder="Введите статус" class="form-control"><br>
+            <input type="text" name="responsible" placeholder="Введите ответсвенного" class="form-control"><br>
+            <textarea name="text" placeholder="Введите задачу" class="form-control"></textarea><br>
+            <button type="submit" class="btn btn-success">Добавить задачу</button>
+        </form>
+    </div>
+</main>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
