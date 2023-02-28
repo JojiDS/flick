@@ -14,9 +14,9 @@
                 <li class="btn btn-primary"><a href="/task/add" class="nav-link">Добавить задачу</a></li>
             </div>
             <div th:each="el : ${tasks}" class="alert alert-info mt-2">
-                <h3 th:text="${el.text}"/>
+                <h3 th:text="${el.status}"/>
                 <p th:text="${el.responsible}"/>
-                <p th:text="${el.status}"/>
+                <p th:text="${el.text}"/>
                 <a th:href="'/task' + ${el.id}" class="btn btn-warning">Детальнее</a><br><br>
                 <form th:action="'/task' + ${el.id} + '/remove'" method="post">
                     <button class="btn btn-warning" type="submit">Удалить</button>
