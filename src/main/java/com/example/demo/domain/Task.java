@@ -14,6 +14,12 @@ public class Task {
     private String responsible;
     private String status;
 
-//    @ManyToOne
-//    private User user;
+    public Task(String text, String responsible, String status) {
+        this.text = text;
+        this.responsible = responsible;
+        this.status = status;
+    }
+
+    public Task() {
+    }
 }
